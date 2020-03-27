@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.GregorianCalendar;
 
 public class Server
 {
@@ -36,19 +37,26 @@ public class Server
 //        }
 //      }
       String firstMessage;
-      if((firstMessage = in.readLine()).equals("connect")){
-        System.out.println("Client " + client.getInetAddress().getHostAddress() + " wants to connect");
-        out.println("username?");
-        System.out.println("username: " + in.readLine());
-        out.println("password?");
-        System.out.println("password: " + in.readLine());
-        System.out.println("client has been approved");
-        out.println("approved");
-
+      if((firstMessage = in.readLine()).equals("connect") || firstMessage.equals("login")){
+        if(firstMessage.equals("login")){
+          System.out.println("Client " + client.getInetAddress().getHostAddress() + " wants to connect");
+          out.println("username?");
+          System.out.println("username: " + in.readLine());
+          out.println("password?");
+          System.out.println("password: " + in.readLine());
+        }else {
+          out.println("approved");
+          System.out.println("client has been approved");
+        }
         String message;
         while((message = in.readLine()) != null){
-          System.out.println("client wrote: " + message);
-          out.println("I got your message: '" + message + "'");
+          if(message.equals("/time")){
+            out.println(GregorianCalendar.getInstance().getTimeInMillis());
+          }
+          else {
+            System.out.println("client wrote: " + message);
+            out.println("I got your message: '" + message + "'");
+          }
         }
       }else{
         System.out.println("client " + client.getInetAddress().getHostAddress() + " wrote " + firstMessage + " and has been disconnected");
