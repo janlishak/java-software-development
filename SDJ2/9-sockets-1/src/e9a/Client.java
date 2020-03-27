@@ -9,13 +9,10 @@ import java.util.Scanner;
 
 public class Client
 {
-  public Client() throws IOException
+  public static void main(String[] args) throws IOException
   {
     Socket mySocket = null;
-    try
-    {
-      mySocket = new Socket("localhost", 5678);
-    }
+    try { mySocket = new Socket("localhost", 5678); }
     catch (IOException e)
     {
       System.out.println("Error: Cannot connect to the Server!");
@@ -35,6 +32,8 @@ public class Client
         {
           System.out.println(readLine);
         }
+        System.out.println("connection broken");
+        System.exit(0);
       }
       catch (Exception e) { }
     }).start();
