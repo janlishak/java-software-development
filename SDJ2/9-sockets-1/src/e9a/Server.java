@@ -1,11 +1,14 @@
 package e9a;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.GregorianCalendar;
 
 public class Server
@@ -44,14 +47,24 @@ public class Server
           System.out.println("username: " + in.readLine());
           out.println("password?");
           System.out.println("password: " + in.readLine());
-        }else {
+        }
           out.println("approved");
           System.out.println("client has been approved");
-        }
         String message;
         while((message = in.readLine()) != null){
           if(message.equals("/time")){
             out.println(GregorianCalendar.getInstance().getTimeInMillis());
+          }
+          else if(message.startsWith("/sum")){
+            int sum = 0;
+            String numbers = message.replace("/sum", "").trim();
+            String[] stringArray = numbers.split(" ");
+            for (String stringNumber: stringArray)
+            {
+              try {sum+=Integer.parseInt(stringNumber); } catch (Exception e){}
+            }
+            out.println(sum);
+
           }
           else {
             System.out.println("client wrote: " + message);
