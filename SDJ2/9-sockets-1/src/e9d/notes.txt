@@ -1,0 +1,13 @@
+todo:
+Exercise:Extra features for the "chat" systemChange the"Chat"-exercise (Exercise 09.01)such that you
+Add a login (username). Define protocol, update client and server.
+Server logs username and ip with the messages
+Change the server to store logs in a file.
+How and when is up to you.
+Change the serve not to allow flooding
+(the same message being send more than 5 times). Either disconnect or another way
+to handle it
+Create another thread on the client side (a recieverThread).
+This one is created and started by the ClientHandle. The recieverThread waits for incoming messages
+in an infinite loop and just print out the message.
+Let the server send a message, e.g. after login, if flooding or a random time.
