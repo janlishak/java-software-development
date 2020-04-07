@@ -1,6 +1,6 @@
-package view;
+package server.view;
 
-import model.Model;
+import server.model.Model;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

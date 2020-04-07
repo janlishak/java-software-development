@@ -1,6 +1,6 @@
 package network;
 
-import model.Student;
+import server.model.Student;
 
 public class StudentPackage extends NetworkPackage
 {

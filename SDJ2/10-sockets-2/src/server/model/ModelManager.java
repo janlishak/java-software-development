@@ -1,4 +1,4 @@
-package model;
+package server.model;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -47,5 +47,4 @@ public class ModelManager implements Model
   {
     property.removePropertyChangeListener(listener);
   }
-
 }
