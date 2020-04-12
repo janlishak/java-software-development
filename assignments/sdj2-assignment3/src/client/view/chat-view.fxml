@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="313.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.ChatViewController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="200.0" text="Messages">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#users" prefHeight="76.0" prefWidth="62.0" text="Users" />
+            <Button mnemonicParsing="false" onAction="#exit" prefHeight="98.0" prefWidth="62.0" text="Exit" />
+         </children>
+      </HBox>
+      <TextArea prefHeight="375.0" prefWidth="313.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField prefHeight="56.0" prefWidth="265.0" />
+            <Button mnemonicParsing="false" onAction="#send" prefHeight="67.0" prefWidth="72.0" text="Send" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
