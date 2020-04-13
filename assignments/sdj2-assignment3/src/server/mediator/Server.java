@@ -23,11 +23,12 @@ public class Server implements ChatServer
     UnicastRemoteObject.exportObject(this, 0);
   }
 
-  @Override public void registerClient(ChatClient client, User user)
+  @Override public void registerClient(ChatClient client, User user) throws RemoteException
   {
     clients.add(client);
     users.add(user);
     model.log("new client connected " + client + "\n" + user);
+    updateAllClientsUserList();
   }
 
   @Override public void broadCast(Message message, ChatClient sender) throws RemoteException
@@ -35,8 +36,8 @@ public class Server implements ChatServer
     model.log("broadcasting message" + message);
     for (ChatClient client : clients)
     {
-      if(client.equals(sender))
-        continue;
+//      if(client.equals(sender))
+//        continue;
 
       client.receiveMessage(message);
     }
@@ -51,5 +52,19 @@ public class Server implements ChatServer
   @Override public String ping() throws RemoteException
   {
     return "pong";
+  }
+
+  @Override public void updateUser(User user, ChatClient client) throws RemoteException
+  {
+    users.set(clients.indexOf(client), user);
+    updateAllClientsUserList();
+  }
+
+  public void updateAllClientsUserList() throws RemoteException
+  {
+    for (ChatClient chatClient : clients)
+    {
+      chatClient.receiveUserList(users);
+    }
   }
 }

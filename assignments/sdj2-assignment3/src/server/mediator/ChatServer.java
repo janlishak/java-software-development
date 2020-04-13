@@ -13,4 +13,5 @@ public interface ChatServer extends Remote
   void broadCast(Message message, ChatClient sender) throws RemoteException;
   void requestUserList(ChatClient client) throws  RemoteException;
   String ping() throws RemoteException;
+  void updateUser(User user, ChatClient client) throws RemoteException;
 }

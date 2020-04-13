@@ -6,6 +6,8 @@ import server.mediator.ChatServer;
 import server.model.Message;
 import server.model.User;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -16,9 +18,11 @@ public class ClientModelManager implements ClientModel
   private ChatClient client;
   private ChatServer server;
   private User user;
+  private PropertyChangeSupport property;
 
   public ClientModelManager()
   {
+    property = new PropertyChangeSupport(this);
     try
     {
       client = new Client(this);
@@ -27,7 +31,7 @@ public class ClientModelManager implements ClientModel
     {
       e.printStackTrace();
     }
-    user = new User("New User", "", "");
+    user = new User("New User", "unspecified", "unknown");
   }
 
   @Override public void connect()
@@ -41,14 +45,14 @@ public class ClientModelManager implements ClientModel
       System.exit(0);
     }
 
-//    try
-//    {
-//      System.out.println(server.ping());
-//    }
-//    catch (RemoteException e)
-//    {
-//      e.printStackTrace();
-//    }
+    try
+    {
+      System.out.println(server.ping());
+    }
+    catch (RemoteException e)
+    {
+      e.printStackTrace();
+    }
 
     registerClient();
   }
@@ -91,12 +95,47 @@ public class ClientModelManager implements ClientModel
 
   @Override public void receiveMessage(Message message)
   {
-    System.out.println(message);
+    System.out.println("got a message" + message);
+    property.firePropertyChange("broadcast", null, message);
   }
 
   @Override public void receiveUserList(ArrayList<User> users)
   {
     System.out.println(users);
+    property.firePropertyChange("userlist", null, users);
   }
 
+  @Override public User getUser()
+  {
+    return user;
+  }
+
+  @Override public void setUser(User user)
+  {
+    System.out.println("new user profile " + user);
+    this.user = user;
+    updateUser();
+  }
+
+  @Override public void updateUser()
+  {
+    try
+    {
+      server.updateUser(user, client);
+    }
+    catch (RemoteException e)
+    {
+      System.out.println("user profile update failed");
+    }
+  }
+
+  @Override public void addListener(PropertyChangeListener listener)
+  {
+    property.addPropertyChangeListener(listener);
+  }
+
+  @Override public void removeListener(PropertyChangeListener listener)
+  {
+    property.removePropertyChangeListener(listener);
+  }
 }

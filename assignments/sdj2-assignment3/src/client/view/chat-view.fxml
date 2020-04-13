@@ -21,10 +21,10 @@
             <Button mnemonicParsing="false" onAction="#exit" prefHeight="98.0" prefWidth="62.0" text="Exit" />
          </children>
       </HBox>
-      <TextArea prefHeight="375.0" prefWidth="313.0" />
+      <TextArea fx:id="messages" prefHeight="375.0" prefWidth="313.0" />
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <TextField prefHeight="56.0" prefWidth="265.0" />
+            <TextField fx:id="prompt" onAction="#send" prefHeight="56.0" prefWidth="265.0" />
             <Button mnemonicParsing="false" onAction="#send" prefHeight="67.0" prefWidth="72.0" text="Send" />
          </children>
       </HBox>

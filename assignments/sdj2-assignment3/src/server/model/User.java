@@ -49,4 +49,9 @@ public class User implements Serializable
   {
     return "User{" + "nickName='" + nickName + '\'' + ", fullName='" + fullName + '\'' + ", ipAddress='" + ipAddress + '\'' + '}';
   }
+
+  public String stringFormat(){
+    //return "Nickname: " + nickName + "\nFull Name: " + fullName +"\nIP: " + ipAddress + "\n";
+    return "Nickname: " + nickName + "\nIP: " + ipAddress + "\n";
+  }
 }
