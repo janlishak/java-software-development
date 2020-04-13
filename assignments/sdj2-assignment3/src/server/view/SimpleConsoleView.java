@@ -1,13 +1,15 @@
 package server.view;
 
+import server.model.ServerModel;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 public class SimpleConsoleView implements PropertyChangeListener
 {
-  public SimpleConsoleView()
+  public SimpleConsoleView(ServerModel model)
   {
-    // TODO: 3/30/20 add listener to this class;
+    model.addListener(this);
   }
 
   @Override public void propertyChange(PropertyChangeEvent propertyChangeEvent)

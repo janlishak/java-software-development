@@ -1,16 +1,52 @@
 package server.model;
 
-public class User
+import java.io.Serializable;
+
+public class User implements Serializable
 {
-  public User(String name)
+  private String nickName;
+  private String fullName;
+  private String ipAddress;
+
+  public User(String nickName, String fullName, String ipAddress)
   {
-    this.name = name;
+    this.nickName = nickName;
+    this.fullName = fullName;
+    this.ipAddress = ipAddress;
   }
 
-  private String name;
-
-  public String getName()
+  public String getNickName()
   {
-    return name;
+    return nickName;
+  }
+
+  public void setNickName(String nickName)
+  {
+    this.nickName = nickName;
+  }
+
+  public String getFullName()
+  {
+    return fullName;
+  }
+
+  public void setFullName(String fullName)
+  {
+    this.fullName = fullName;
+  }
+
+  public String getIpAddress()
+  {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress)
+  {
+    this.ipAddress = ipAddress;
+  }
+
+  @Override public String toString()
+  {
+    return "User{" + "nickName='" + nickName + '\'' + ", fullName='" + fullName + '\'' + ", ipAddress='" + ipAddress + '\'' + '}';
   }
 }
