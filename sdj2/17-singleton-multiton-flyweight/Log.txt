@@ -1,0 +1,4 @@
+08/05/2020 00:06:06 this is from logger one
+08/05/2020 00:06:06 message from logger two
+08/05/2020 00:25:43 this is from logger one
+08/05/2020 00:25:44 message from logger two
