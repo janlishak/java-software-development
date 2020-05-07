@@ -1,4 +1,6 @@
-public class StarSign
+package flyweight_shared;
+
+public class AbstractStarSign
 {
   private String name;
   private DateInterval interval;
@@ -6,7 +8,7 @@ public class StarSign
   public static final String[] LEGAL_NAMES = {"Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius",
       "Pisces"};
 
-  public StarSign(String name)
+  public AbstractStarSign(String name)
   {
     this.name = Character.toUpperCase(name.charAt(0)) + name.substring(1).toLowerCase();
     setDateInterval();
