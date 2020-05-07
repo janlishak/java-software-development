@@ -1,3 +1,5 @@
+package flyweight_shared;
+
 public class AbstractStarSign
 {
   private String name;

@@ -1,3 +1,5 @@
+package flyweight_shared;
+
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,5 +1,6 @@
-package flyweight_shared;
+package flyweight_unshared;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,5 +16,9 @@ public class StarSignFactory
       starSigns.put(name, starSign);
     }
     return starSign;
+  }
+
+  public static AbstractStarSign getStarSign(String name, Calendar birthday, String location){
+    return new StarSignWithInterpretation(name, birthday, location);
   }
 }

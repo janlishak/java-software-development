@@ -1,3 +1,5 @@
+package flyweight_shared;
+
 import java.util.Calendar;
 
 public class Person
@@ -23,7 +25,7 @@ public class Person
 
   @Override public String toString()
   {
-    return "Person{" + "name='" + name + '\'' + ", starSign=" + starSign + '}';
+    return name + " " + starSign;
   }
 
   public void setStarSign(Calendar birthday, String location)

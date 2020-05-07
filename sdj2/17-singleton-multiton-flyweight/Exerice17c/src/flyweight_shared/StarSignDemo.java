@@ -1,3 +1,5 @@
+package flyweight_shared;
+
 public class StarSignDemo
 {
   public static void main(String[] args)
@@ -23,7 +25,7 @@ public class StarSignDemo
     list[9] = new Person("Jens", "Leo");
 
     //Check all objects and their reference hash
-    System.out.println("Person objects:");
+    System.out.println("flyweight_shared.Person objects:");
     for (int i = 0; i < list.length; i++)
     {
       System.out.printf("%-40s %d\n", list[i], list[i].getStarSign().hashCode());

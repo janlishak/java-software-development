@@ -1,4 +1,4 @@
-package flyweight_shared;
+package flyweight_unshared;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

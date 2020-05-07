@@ -1,4 +1,4 @@
-package flyweight_shared;
+package flyweight_unshared;
 
 public class StarSign extends AbstractStarSign
 {

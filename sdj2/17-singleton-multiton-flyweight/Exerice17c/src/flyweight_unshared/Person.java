@@ -1,4 +1,4 @@
-package flyweight_shared;
+package flyweight_unshared;
 
 import java.util.Calendar;
 
@@ -30,7 +30,6 @@ public class Person
 
   public void setStarSign(Calendar birthday, String location)
   {
-    //todo this is not fully implemented
-    //this.starSign = starSign;
+    this.starSign = StarSignFactory.getStarSign(name, birthday, location);
   }
 }

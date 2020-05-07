@@ -6,3 +6,5 @@
 08/05/2020 00:26:14 message from logger four
 08/05/2020 00:26:16 message from logger three
 08/05/2020 00:26:16 message from logger four
+08/05/2020 00:44:50 message from logger three
+08/05/2020 00:44:50 message from logger four
