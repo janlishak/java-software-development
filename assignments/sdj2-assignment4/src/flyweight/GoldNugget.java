@@ -9,6 +9,6 @@ public class GoldNugget extends Valuable
 
   @Override public int getValue()
   {
-    return 50;
+    return 16;
   }
 }

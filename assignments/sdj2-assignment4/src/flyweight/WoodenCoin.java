@@ -9,6 +9,6 @@ public class WoodenCoin extends Valuable
 
   @Override public int getValue()
   {
-    return 5;
+    return 10;
   }
 }

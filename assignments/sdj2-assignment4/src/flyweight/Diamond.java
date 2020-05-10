@@ -9,6 +9,6 @@ public class Diamond extends Valuable
 
   @Override public int getValue()
   {
-    return 100;
+    return 20;
   }
 }

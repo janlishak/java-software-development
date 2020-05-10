@@ -6,20 +6,23 @@ import utility.collection.ArrayList;
 
 public class Deposit implements Buffer<Valuable>
 {
+  private final int DEPOSIT_SIZE = 100;
   private ArrayList<Valuable> valuablesArrayList;
 
   public Deposit()
   {
     this.valuablesArrayList = new ArrayList<Valuable>();
+
   }
 
   @Override public synchronized void put(Valuable element)
   {
-    while(valuablesArrayList.isFull()){
-      Logger.getInstance().addLog("Deposit full, waiting..");
+    while(valuablesArrayList.size() >= DEPOSIT_SIZE){ // wait if it's full
+      Logger.getInstance().addLog("deposit full, waiting..");
       try { wait(); } catch (InterruptedException e) { e.printStackTrace(); }
     }
     valuablesArrayList.add(element);
+    notifyAll();
   }
 
   @Override public synchronized Valuable take()
@@ -28,6 +31,7 @@ public class Deposit implements Buffer<Valuable>
       Logger.getInstance().addLog("Deposit empty, waiting..");
       try { wait(); } catch (InterruptedException e) { e.printStackTrace(); }
     }
+    notifyAll();
     return valuablesArrayList.remove(0);
   }
 

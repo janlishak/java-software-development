@@ -9,6 +9,6 @@ public class Jewel extends Valuable
 
   @Override public int getValue()
   {
-    return 75;
+    return 14;
   }
 }

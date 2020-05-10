@@ -27,10 +27,15 @@ public class Mine
               valuable = new Jewel();break;
             case "diamond":
               valuable = new Diamond();break;
+            default:
+              System.out.println("B");
           }
           valuables.put(ValuableType, valuable);
         }
       }
+    }
+    if(valuable == null){
+      System.out.println("A");
     }
     return valuable;
   }

@@ -14,6 +14,11 @@ public class TreasureRoom implements TreasureRoomDoor
   boolean activeWriter;
   int waitingWriters;
 
+  public TreasureRoom()
+  {
+    treasureRoomValuables = new ArrayList<Valuable>();
+  }
+
   @Override public synchronized void acquireReadAccess()
   {
     waitingReaders++;
@@ -23,6 +28,7 @@ public class TreasureRoom implements TreasureRoomDoor
     }
     waitingReaders--;
     activeReaders++;
+    notifyAll();
   }
 
   @Override public synchronized void releaseReadAccess()
@@ -42,6 +48,7 @@ public class TreasureRoom implements TreasureRoomDoor
     }
     activeWriter = true;
     waitingWriters--;
+    notifyAll();
   }
 
   @Override public synchronized void releaseWriteAccess()

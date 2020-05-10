@@ -9,6 +9,6 @@ public class Ruby extends Valuable
 
   @Override public int getValue()
   {
-    return 25;
+    return 11;
   }
 }
