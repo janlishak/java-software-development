@@ -7,7 +7,7 @@ public class WoodenCoin extends Valuable
     super("Wooden Coin");
   }
 
-  @Override int getValue()
+  @Override public int getValue()
   {
     return 5;
   }

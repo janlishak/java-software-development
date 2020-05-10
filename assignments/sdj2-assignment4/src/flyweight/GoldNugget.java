@@ -7,7 +7,7 @@ public class GoldNugget extends Valuable
     super("Gold Nugget");
   }
 
-  @Override int getValue()
+  @Override public int getValue()
   {
     return 50;
   }

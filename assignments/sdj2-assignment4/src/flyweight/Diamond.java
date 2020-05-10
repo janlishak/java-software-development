@@ -7,7 +7,7 @@ public class Diamond extends Valuable
     super("Diamond");
   }
 
-  @Override int getValue()
+  @Override public int getValue()
   {
     return 100;
   }

@@ -7,7 +7,7 @@ public class Ruby extends Valuable
     super("Ruby");
   }
 
-  @Override int getValue()
+  @Override public int getValue()
   {
     return 25;
   }

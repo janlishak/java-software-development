@@ -7,7 +7,7 @@ public class Jewel extends Valuable
     super("Jewel");
   }
 
-  @Override int getValue()
+  @Override public int getValue()
   {
     return 75;
   }

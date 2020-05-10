@@ -1,5 +1,8 @@
 package proxy_readers_writers;
 
+import flyweight.Valuable;
+import utility.collection.ArrayList;
+
 public interface TreasureRoomDoor
 {
   void acquireReadAccess();
@@ -7,7 +10,7 @@ public interface TreasureRoomDoor
   void acquireWriteAccess();
   void releaseWriteAccess();
 
-  void add();
-  void retrieve();
-  void look();
+  void add(Valuable valuable);
+  Valuable retrieve();
+  ArrayList<Valuable> look();
 }
