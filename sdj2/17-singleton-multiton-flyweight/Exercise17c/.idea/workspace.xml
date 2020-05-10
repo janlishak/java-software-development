@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9c67a8be-9ac4-46e2-a1b6-d235bdb82b75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid7481" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid7706" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid7776" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid7842" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid7908" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/.attach_pid8033" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/docs/TheAssigment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/actors/Accountant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/actors/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/actors/ValuablesMiner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/actors/ValuablesTransporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/adapter_producer_consumer/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/Diamond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/GoldNugget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/Jewel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/Mine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/Ruby.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/Valuable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/flyweight/WoodenCoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/junit_testing/logger/LoggerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/proxy_readers_writers/Guardsman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/proxy_readers_writers/TreasureRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/singleton/DateTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/singleton/LogLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/singleton/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/utility/collection/ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../assignments/sdj2-assignment4/src/utility/collection/ListADT.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1bgjqnDdkJv2eKLyHSjpHY8PDFC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c67a8be-9ac4-46e2-a1b6-d235bdb82b75" name="Default Changelist" comment="" />
+      <created>1589060823991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589060823991</updated>
+    </task>
+    <servers />
+  </component>
+</project>
