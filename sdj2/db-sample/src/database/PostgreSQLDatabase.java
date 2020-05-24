@@ -12,12 +12,11 @@ public class PostgreSQLDatabase implements Database
 
   public PostgreSQLDatabase()
   {
-    String driver = "org.postgresql.Driver";
     String url = "jdbc:postgresql://localhost:5432/postgres";
     String user = "postgres";
     String password = "";
     //magic that check if the driver works
-    try { Class.forName(driver); } catch (ClassNotFoundException e){ e.printStackTrace(); }
+    try { Class.forName("org.postgresql.Driver"); } catch (ClassNotFoundException e){ e.printStackTrace(); }
     //create the connection to the server
     try { connection = DriverManager.getConnection(url, user, password); debug("connected");}
     catch (SQLException e) { debug("connection error");e.printStackTrace(); }
